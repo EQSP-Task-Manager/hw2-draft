@@ -9,6 +9,8 @@ from dataclasses import dataclass
 from markdown import markdown
 from bs4 import BeautifulSoup
 
+ACCEPTED_WORDS_FILE_PATH = '/accepted-words.txt'
+
 
 @dataclass
 class LineReport:
@@ -49,14 +51,16 @@ def _get_report(file_path: str) -> Report:
     with open(file_path, 'r') as file:
         for num, line in enumerate(file):
             misspelled_words = _get_misspelled_words(line)
-            if len(misspelled_words) == 0:
-                continue
-            line_report = LineReport(num=num + 1, words=misspelled_words)
-            line_reports.append(line_report)
+            if len(misspelled_words) > 0:
+                line_report = LineReport(num=num + 1, words=misspelled_words)
+                line_reports.append(line_report)
     return Report(lines=line_reports)
 
 
 def _get_misspelled_words(text: str) -> list[str]:
+    with open(ACCEPTED_WORDS_FILE_PATH, 'r') as file:
+        accepted_words = set(file.read().split('\n'))
+
     process = subprocess.run(
         f'echo \'{text}\' | aspell --lang en_US --mode markdown list',
         shell=True, check=True, text=True, stdout=subprocess.PIPE
@@ -64,7 +68,7 @@ def _get_misspelled_words(text: str) -> list[str]:
     result = []
     words = set()
     for word in process.stdout.split('\n'):
-        if len(word) > 0 and word not in words:
+        if len(word) > 0 and word not in words and word not in accepted_words:
             words.add(word)
             result.append(word)
     return result

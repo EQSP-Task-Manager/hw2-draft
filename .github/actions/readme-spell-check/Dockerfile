@@ -7,6 +7,7 @@ RUN pip install -r requirements.txt
 
 COPY main.py /
 COPY entrypoint.sh /
+COPY accepted-words.txt /
 
 RUN apk add aspell aspell-en
 RUN chmod +x /entrypoint.sh
