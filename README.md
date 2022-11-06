@@ -1,6 +1,6 @@
 # hw2-draft
 
-“On the other hand, we _denounce_ with righteous indignation and dislike men _wgo_ are so 
+“On the other hand, we _denounce_ with righteous indignation and dislike men _who_ are so 
 beguiled and demoralized by the charms of _pleasure_ of the moment, so blinded by desire, 
 that they _cannot_ foresee the pain and trouble that are bound to ensue; 
 and equal blame belongs to those who fail in their duty through _weakness_ of will, 
