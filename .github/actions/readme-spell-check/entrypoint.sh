@@ -1,4 +1,6 @@
 #!/usr/bin/env sh
 
+pwd
+ls
 echo $1
-python main.py --path $1 >> $GITHUB_STEP_SUMMARY
+python main.py --path $1

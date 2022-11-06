@@ -11,6 +11,6 @@ COPY main.py .
 COPY entrypoint.sh .
 
 RUN apk add aspell
-RUN chmod a+x entrypoint.sh
+RUN chmod +x entrypoint.sh
 
-ENTRYPOINT ["sh", "entrypoint.sh"]
+ENTRYPOINT ["./entrypoint.sh"]
