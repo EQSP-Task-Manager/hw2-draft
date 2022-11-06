@@ -54,7 +54,7 @@ def _get_report(file_path: str) -> Report:
 
 def _get_misspelled_words(text: str) -> list[str]:
     process = subprocess.run(
-        f'echo \'{text}\' | aspell --master en_US --mode markdown list',
+        f'echo \'{text}\' | aspell --mode markdown list',
         shell=True, check=True, text=True, stdout=subprocess.PIPE
     )
     result = []
