@@ -37,7 +37,7 @@ def main() -> str:
         sys.exit(1)
 
     report = _get_report(args.path)
-    return report.to_markdown()
+    print(report.to_markdown())
 
 
 def _get_report(file_path: str) -> Report:
