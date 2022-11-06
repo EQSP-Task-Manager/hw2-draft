@@ -1,6 +1,4 @@
 #!/usr/bin/env sh
 
-pwd
-ls
-echo $1
+cat $1
 python /main.py --path $1
