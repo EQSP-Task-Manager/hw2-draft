@@ -3,4 +3,4 @@
 pwd
 ls
 echo $1
-python /main.py $1
+python /main.py --path $1
