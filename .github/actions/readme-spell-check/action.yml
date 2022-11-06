@@ -4,7 +4,7 @@ inputs:
   file-path:
     description: 'Path to README file'
     required: false
-    default: '/README.md'
+    default: './README.md'
 runs:
   using: 'docker'
   image: 'Dockerfile'
