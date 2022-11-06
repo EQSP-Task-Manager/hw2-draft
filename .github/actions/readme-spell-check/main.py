@@ -27,7 +27,7 @@ class Report:
         return '\n'.join(result)
 
 
-def main() -> str:
+def main():
     args_parser = argparse.ArgumentParser(description='README.md spell checker')
     args_parser.add_argument('--path', type=str, default='README.md', help='Path to README.md file')
     args = args_parser.parse_args()
@@ -37,7 +37,11 @@ def main() -> str:
         sys.exit(1)
 
     report = _get_report(args.path)
-    print(report.to_markdown())
+    if len(report.lines) > 0:
+        print('## Misspelled words')
+        print(report.to_markdown())
+        sys.exit(1)
+    print('## No misspelled words)')
 
 
 def _get_report(file_path: str) -> Report:
