@@ -9,7 +9,7 @@ COPY README.md /
 COPY main.py /
 COPY entrypoint.sh /
 
-RUN apk add aspell
+RUN apk add aspell aspell-en
 RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
