@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="715ebee0-2c54-4ded-82cb-5f6485bea45f" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/.github/actions/readme-spell-check/accepted-words.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/actions/readme-spell-check/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/.github/actions/readme-spell-check/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/actions/readme-spell-check/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/.github/actions/readme-spell-check/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +48,7 @@
       <option name="presentableId" value="Default" />
       <updated>1667712155637</updated>
       <workItem from="1667712156870" duration="8134000" />
-      <workItem from="1667752090466" duration="11624000" />
+      <workItem from="1667752090466" duration="12126000" />
     </task>
     <servers />
   </component>
